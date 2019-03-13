@@ -15,7 +15,7 @@ path = 'C:/Users/orwic/Desktop/JobHunt/'
 os.chdir(path)
 max_results_per_city = 100
 cities = ['bethesda']   # cities for the scraper to visit
-targetFile = 'brianProspects.csv'
+targetFile = 'scrapedJobListings.csv'
 columns = ['Length Posted', 'Job Title', 'Location', 'Summary', 'Company', 'Link']  # column for csv
 jobs = ['java+entry', 'java', 'python', 'python+entry']
 job_df = pd.DataFrame(columns=columns)  # dataframe
