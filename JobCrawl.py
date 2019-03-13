@@ -2,7 +2,6 @@
 # 12/14/17
 # Scrape Indeed for jobs in cities
 
-import sys
 import requests
 from bs4 import BeautifulSoup  # need to pip install lxml
 from time import sleep
