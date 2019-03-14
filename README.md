@@ -4,10 +4,10 @@ jobcrawler
 need python3 
 
 pip install:
-  requests
-  bs4
-  lxml
-  pandas
+  requests,
+  bs4,
+  lxml,
+  pandas.
   
   path will need to be changed to wherever the user wants it to go
   jobs can be edited per user 
