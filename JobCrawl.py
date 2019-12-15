@@ -39,13 +39,13 @@ for city in cities:
                     elif int(numbers[0]) < 30:  # check if the post was created recently
                         job_post.append(numbers.pop())
                     elif int(numbers[0]) >= 30:  # if it was to far out skip the job posting
-                        break
+                        continue
                     for b in div.find_all(name='a', attrs={'data-tn-element':'jobTitle'}):  # grabbing job title
                         job_post.append(b['title'])
                     a = div.findAll(attrs={'class': 'location'})  # grabbing location name
                     for span in a:
                         job_post.append(span.text)
-                    c = div.findAll('span', attrs={'class': 'summary'})  # grabbing summary text
+                    c = div.findAll(attrs={'class': 'summary'})  # grabbing summary text
                     for span in c:
                         job_post.append(span.text.strip())
                     company = div.find_all(name='span', attrs={'class':'company'})  # grabbing company name
@@ -67,5 +67,6 @@ for city in cities:
 
 clean_df = job_df.drop_duplicates(subset=['Summary'])
 clean_df.to_csv(path + targetFile, encoding='utf-8')
+
 # email = 'orwick12@outlook.com'
 # email_me(email, path, targetFile)
